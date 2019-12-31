@@ -4,7 +4,7 @@ using namespace std;
 class stack{
     queue<int> q1;
     queue<int> q2;
-
+public:
     bool isEmpty(){
         return q1.empty() && q2.empty();
     }
@@ -42,6 +42,20 @@ class stack{
         }
     }
 };
-int main(){
+// in this code push function has time complexibility O(n) and every other function is in O(1).
 
+int main(){
+    stack s;
+    cout<<s.isEmpty()<<endl;
+    s.push(1);
+    s.push(12);s.push(15);s.push(2);
+    cout<<s.top()<<endl;
+    cout<<s.size()<<endl;
+    s.pop();
+    cout<<s.top()<<endl;
+    s.push(20);
+    cout<<s.top()<<endl;
+    s.pop();
+    cout<<s.top()<<endl;
+    cout<<s.size()<<endl;
 }
